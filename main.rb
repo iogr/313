@@ -15,19 +15,16 @@ directors =
 puts "Программа «Фильм на вечер»:\n
 Фильм какого режиссера вы хотите сегодня посмотреть?"
 
-index = 0
-while (index..directors.size-1).include?(index)
-  puts "#{index +1}. #{directors[index]}"
-  index += 1
+directors.each.with_index(1) do |director, i|
+  puts "#{i}. #{director}"
 end
 
 user_choice = ""
 until (1..directors.size).include?(user_choice)
   user_choice = STDIN.gets.to_i
-  user_choice -= 1
 end
 
-selected_director = directors[user_choice]
+selected_director = directors[user_choice -1]
 selected_films  = []
 
 films.each do |film|

@@ -1,11 +1,10 @@
 class Film
-  attr_accessor :title, :director, :year, :selected_director
+  attr_accessor :title, :director, :year
 
   def initialize(title, director, year)
     @title = title
     @director = director
     @year = year
-    @selected_director = selected_director
   end
 
   def full_title
