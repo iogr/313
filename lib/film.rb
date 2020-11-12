@@ -1,4 +1,4 @@
-  class Film
+class Film
   attr_accessor :title, :director, :year, :selected_director
 
   def initialize(title, director, year)
