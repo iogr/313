@@ -2,8 +2,6 @@
 require_relative "lib/film"
 
 file_names = "#{__dir__}/data/films"
-# file_count = Dir[File.join(file_names, "*.txt")].count
-
 files = Dir[File.join(file_names, "*.txt")]
 
 films =
