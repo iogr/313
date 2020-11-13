@@ -8,7 +8,7 @@ films =
   files.map { |file| Film.new(*File.readlines(file, chomp: true)) }
 
 directors =
-  films.map { |film| film.director}
+  films.map(&:director)
     .uniq
     .sort
 
@@ -24,12 +24,10 @@ until (1..directors.size).include?(user_choice)
   user_choice = STDIN.gets.to_i
 end
 
-selected_director = directors[user_choice -1]
-selected_films  = []
+selected_director = directors[user_choice - 1]
 
-films.each do |film|
-  selected_films << film if film.director == selected_director
-end
+selected_films = films.select {
+  |film| film.director == selected_director }
 
 puts "И сегодня вечером рекомендую посмотреть:"
 puts selected_films.sample
