@@ -26,8 +26,7 @@ end
 
 selected_director = directors[user_choice - 1]
 
-selected_films = films.select {
-  |film| film.director == selected_director }
+selected_films = films.select { |film| film.director == selected_director }
 
 puts "И сегодня вечером рекомендую посмотреть:"
 puts selected_films.sample
