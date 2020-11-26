@@ -11,7 +11,7 @@ describe Film do
     end
   end
 
-    describe '.new' do
+  describe '.new' do
     it 'creates object with right attributes' do
       expect(film.title).to eq 'Tenet'
       expect(film.director).to eq 'Christopher Nolan'
